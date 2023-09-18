@@ -13,8 +13,12 @@ class Gppro < Formula
   depends_on "openjdk@17"
   
   def install
-    system Formula["maven"].bin/"mvn", "package"
-    prefix.install "tool/target/gp.jar"
+    if build.head?
+      system Formula["maven"].bin/"mvn", "package"
+      prefix.install "tool/target/gp.jar"
+    else 
+      prefix.install "gp.jar"
+    end
     bin.write_jar_script prefix/"gp.jar", "gp"
   end
 end

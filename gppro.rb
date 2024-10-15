@@ -7,7 +7,7 @@ class Gppro < Formula
   url "https://github.com/martinpaljak/GlobalPlatformPro/releases/download/v20.08.12/gp.jar"
   sha256 "a2f0c46e1c1cb533494745987de759d6c8bbcd86ce6c9163f2f7cdfeaa2b2181"
 
-  head "git@github.com:martinpaljak/GlobalPlatformPro.git", branch: "master"
+  # head "git@github.com:martinpaljak/GlobalPlatformPro.git", branch: "master"
 
   depends_on "maven" => :build
   depends_on "openjdk@17"
